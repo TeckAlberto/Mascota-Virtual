@@ -122,6 +122,19 @@ function estadoActual(input){
             }
         break;
 
+        case estados[4]:
+            if(input === 0 || input === 2 || input === 3){
+                estado =4;
+                return outputs[2];
+            }else if(input === 1){
+                estado = 6;
+                return outputs[2];
+            }else if(input === 4){
+                estado = 7;
+                return outputs[4];
+            }
+        break;
+        
 
     }
 

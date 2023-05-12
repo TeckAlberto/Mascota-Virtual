@@ -158,6 +158,13 @@ function estadoActual(input){
             }
         break;
 
+        case estados[7]:
+            if(input === 5){
+                estado = 0;
+                return outputs[10];
+            }
+        break;
+
     }
 
     return '';

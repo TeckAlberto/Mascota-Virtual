@@ -1,7 +1,3 @@
-const IO = {
-    
-}
-
 const estados = [
     'despierto',
     'feliz',
@@ -89,11 +85,27 @@ function estadoActual(input){
                 return outputs[6];
             }
         break;
+
         case estados[1]:
-            if(input){
+            if(input === 0 || input === 2 || input === 3){
+                estado = 1;
+                return (input === 0) ? outputs[0] : (input === 2) ? outputs[6] : outputs[7];
+            }else if(input === 1){
+                estado = 3;
+                return outputs[5];
+            }else if(input === 4){
                 estado = 2;
-                console.log(estado);
-                return outputs[input];
+                return outputs[1];
+            }
+        break;
+
+        case estados[2]:
+            if(input === 0 || input === 1 || input === 3){
+                estado = 1;
+                return (input === 0 || input === 3) ? outputs[0] : outputs[5];
+            }else if(input === 2 || input === 4){
+                estado = 2;
+                return (input === 2) ? outputs[2] : outputs[9];
             }
         break;
 
@@ -102,10 +114,3 @@ function estadoActual(input){
 
     return '';
 }
-
-// const mensaje = document.querySelector('#message');
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     mensaje.textContent = inputs[jugar];
-// });

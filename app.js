@@ -49,7 +49,7 @@ function generarEstado(valor) {
 
     mensajeOutput.textContent = output;
     
-    if(mensajeOutput !== ''){
+    if(mensajeOutput.textContent !== ''){
         mensajeOutput.classList.add('bg-cyan-600', 'rounded-lg', 'p-2', 'border-3', 'border-cyan-900');
         setTimeout(() => {
             mensajeOutput.classList.remove('bg-cyan-600', 'rounded-lg', 'p-2', 'border-3', 'border-cyan-900');
@@ -81,7 +81,7 @@ function estadoActual(input){
             }else if(input === 4){
                 estado = 2;
                 return outputs[9];
-            }else{
+            }else if(input === 2){
                 return outputs[6];
             }
         break;
